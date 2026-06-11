@@ -6,7 +6,7 @@ const INITIAL = { name: '', email: '', message: '' }
 
 export default function Contact() {
   const [form,    setForm]    = useState(INITIAL)
-  const [status,  setStatus]  = useState('idle')   // idle | loading | success | error
+  const [status,  setStatus]  = useState('idle')   
   const [errors,  setErrors]  = useState({})
 
   function validate() {
@@ -49,17 +49,16 @@ export default function Contact() {
 
   return (
     <main className="pt-16 page-transition">
-      {/* Header */}
       <section className="bg-linear-to-br from-slate-50 to-blue-50/50 py-20">
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <p className="text-xs font-bold tracking-widest text-blue-600 uppercase mb-4">Get In Touch</p>
+          <p className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest text-blue-600 uppercase bg-blue-50 border border-blue-100 px-4 py-2 rounded-full mb-8 opacity-0 animate-fade-up">Get In Touch</p>
           <h1 className="font-display text-5xl font-bold text-slate-900 mb-5 leading-tight">
             We'd love to<br />
             <span className="text-blue-600 italic">hear from you</span>
           </h1>
           <p className="text-slate-500 text-lg max-w-xl mx-auto leading-relaxed">
             Whether you have a question about our services, want to join as a student,
-            or are looking to partner with us — reach out.
+            or are looking to partner with us reach out.
           </p>
         </div>
       </section>
@@ -103,7 +102,7 @@ export default function Contact() {
               <div className="flex gap-3">
                 {[
                   { href: 'https://www.facebook.com/aipathshalaglobal', Icon: Facebook, label: 'Facebook' },
-                  { href: 'https://aipathshalaglobal.com', Icon: Instagram, label: 'Instagram' },
+                  { href: 'https://www.instagram.com/sonic_edu?igsh=bnQyNTR6ZThyYTBx', Icon: Instagram, label: 'Instagram' },
                   { href: 'https://www.linkedin.com/company/a-and-i-pathshala-global/', Icon: Linkedin, label: 'LinkedIn' },
                 ].map(({ href, Icon, label }) => (
                   <a

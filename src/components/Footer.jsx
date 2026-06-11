@@ -34,7 +34,7 @@ export default function Footer() {
           <div className="flex gap-3">
             {[
               { href: 'https://www.facebook.com/aipathshalaglobal', Icon: Facebook },
-              { href: 'https://aipathshalaglobal.com',              Icon: Instagram },
+              { href: 'https://www.instagram.com/sonic_edu?igsh=bnQyNTR6ZThyYTBx', Icon: Instagram },
               { href: 'https://www.linkedin.com/company/a-and-i-pathshala-global/', Icon: Linkedin },
             ].map(({ href, Icon }) => (
               <a
@@ -50,7 +50,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Quick Links */}
+        
         <div>
           <h4 className="text-white text-xs font-bold tracking-widest uppercase mb-5">Quick Links</h4>
           <ul className="space-y-3">
@@ -65,7 +65,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Services */}
+        
         <div>
           <h4 className="text-white text-xs font-bold tracking-widest uppercase mb-5">Services</h4>
           <ul className="space-y-3">
@@ -78,7 +78,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Contact */}
+        
         <div>
           <h4 className="text-white text-xs font-bold tracking-widest uppercase mb-5">Contact</h4>
           <div className="space-y-4 text-sm">
@@ -108,7 +108,7 @@ export default function Footer() {
       <div className="border-t border-slate-800">
         <div className="max-w-6xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs text-slate-500">© {new Date().getFullYear()} AI Pathsala. All rights reserved.</p>
-          <p className="text-xs text-slate-500">Made by Shiva</p>
+          <p className="text-xs text-slate-500">Made by Shiva Regmi</p>
         </div>
       </div>
     </footer>

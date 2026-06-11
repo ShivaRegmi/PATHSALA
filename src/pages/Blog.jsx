@@ -71,10 +71,10 @@ export default function Blog() {
 
   return (
     <main className="pt-16 page-transition">
-      {/* Header */}
+      
       <section className="bg-linear-to-br from-slate-50 to-blue-50/50 py-20">
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <p className="text-xs font-bold tracking-widest text-blue-600 uppercase mb-4">Resources</p>
+          <p className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest text-blue-600 uppercase bg-blue-50 border border-blue-100 px-4 py-2 rounded-full mb-8 opacity-0 animate-fade-up">Resources</p>
           <h1 className="font-display text-5xl font-bold text-slate-900 mb-5 leading-tight">
             Insights for Japan-bound<br />
             <span className="text-blue-600 italic">students</span>
@@ -89,7 +89,6 @@ export default function Blog() {
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6">
 
-          {/* Featured post */}
           {featured && (
             <div className="bg-linear-to-br from-blue-600 to-indigo-700 rounded-3xl p-8 md:p-12 mb-12 text-white relative overflow-hidden">
               <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-white/5 blur-3xl pointer-events-none" />

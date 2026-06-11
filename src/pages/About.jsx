@@ -29,10 +29,10 @@ export default function About() {
       {/* Header */}
       <section className="bg-linear-to-br from-slate-50 to-blue-50/50 py-20">
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <p className="text-xs font-bold tracking-widest text-blue-600 uppercase mb-4">Our Story</p>
+          <p className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest text-blue-600 uppercase bg-blue-50 border border-blue-100 px-4 py-2 rounded-full mb-8 opacity-0 animate-fade-up">Our Story</p>
           <h1 className="font-display text-5xl font-bold text-slate-900 mb-5 leading-tight">
             We exist to bridge<br />
-            <span className="text-blue-600 italic">Nepal and Japan</span>
+            <span className="text-blue-600 italic">Your Gap </span>
           </h1>
           <p className="text-slate-500 text-lg max-w-2xl mx-auto leading-relaxed">
             AI Pathsala was born from a simple observation: thousands of Nepali students
@@ -167,7 +167,7 @@ export default function About() {
             Be part of the story
           </h2>
           <p className="text-blue-100 mb-8 leading-relaxed text-lg">
-            Whether you're a student, parent, or partner — we'd love to connect.
+            Whether you're a student, parent, or partner we'd love to connect.
           </p>
           <Link
             to="/contact"

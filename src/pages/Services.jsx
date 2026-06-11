@@ -70,7 +70,8 @@ export default function Services() {
      
       <section className="bg-linear-to-br from-slate-50 to-blue-50/60 py-20">
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <p className="text-xs font-bold tracking-widest text-blue-600 uppercase mb-4">What We Offer</p>
+          <p className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest text-blue-600 uppercase bg-blue-50 border border-blue-100 px-4 py-2 rounded-full mb-8 opacity-0 animate-fade-up ">What We Offer</p>
+          
           <h1 className="font-display text-5xl font-bold text-slate-900 mb-5 leading-tight">
             Services built for<br />
             <span className="text-blue-600 italic">Japan-bound students</span>
@@ -82,7 +83,7 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Services */}
+      {/* {/*className="w-1.5 h-1.5 rounded-full bg-blue-500 inline-block"}  */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6 space-y-8">
           {SERVICES.map(({ Icon, title, tagline, desc, points, color }, i) => {

@@ -9,7 +9,7 @@ const PROJECTS = [
     tagColor: 'bg-blue-600',
     title: 'AI Pathsala App',
     subtitle: 'The dedicated Japanese learning application',
-    desc: 'Our flagship product — a mobile-first application that delivers structured Japanese language learning for Nepal-based students preparing to go to Japan. Powered by adaptive AI to personalise each learner\'s path.',
+    desc: 'Our flagship product a mobile-first application that delivers structured Japanese language learning for Nepal-based students preparing to go to Japan. Powered by adaptive AI to personalise each learner\'s path.',
     features: [
       'JLPT N5 to N2 structured curriculum',
       'AI-adaptive lesson difficulty',
@@ -17,7 +17,7 @@ const PROJECTS = [
       'Offline learning mode',
       'Mock JLPT exams with feedback',
     ],
-    status: 'Live',
+    status: 'Under Development',
     statusColor: 'bg-green-100 text-green-700',
     bg: 'bg-blue-50',
     border: 'border-blue-100',
@@ -28,7 +28,7 @@ const PROJECTS = [
     tagColor: 'bg-indigo-600',
     title: 'Digital Matrix Mandala',
     subtitle: 'Presented at WSC 2025',
-    desc: 'A groundbreaking session presented at the World Sanskrit Conference 2025, exploring the convergence of ancient knowledge systems and modern AI — positioning AI Pathsala at the frontier of education innovation.',
+    desc: 'A groundbreaking session presented at the World Sanskrit Conference 2025, exploring the convergence of ancient knowledge systems and modern AI positioning AI Pathsala at the frontier of education innovation.',
     features: [
       'Presented at World Sanskrit Conference 2025',
       'Explored AI in traditional education contexts',
@@ -66,7 +66,7 @@ export default function Projects() {
       {/* Header */}
       <section className="bg-linear-to-br from-slate-50 to-blue-50/50 py-20">
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <p className="text-xs font-bold tracking-widest text-blue-600 uppercase mb-4">Our Work</p>
+          <p className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest text-blue-600 uppercase bg-blue-50 border border-blue-100 px-4 py-2 rounded-full mb-8 opacity-0 animate-fade-up">Our Work</p>
           <h1 className="font-display text-5xl font-bold text-slate-900 mb-5 leading-tight">
             Projects &amp; Initiatives
           </h1>
@@ -77,13 +77,13 @@ export default function Projects() {
         </div>
       </section>
 
-      {/* Projects list */}
+      
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6 space-y-10">
           {PROJECTS.map(({ Icon, tag, tagColor, title, subtitle, desc, features, status, statusColor, bg, border }) => (
             <div key={title} className={`${bg} border ${border} rounded-3xl p-8 md:p-10 grid md:grid-cols-5 gap-10`}>
 
-              {/* Icon + status */}
+              
               <div className="md:col-span-1 flex md:flex-col items-start gap-4">
                 <div className={`w-16 h-16 rounded-2xl ${tagColor} bg-opacity-10 flex items-center justify-center`}
                   style={{ background: 'rgba(255,255,255,0.7)' }}>
@@ -94,7 +94,7 @@ export default function Projects() {
                 </span>
               </div>
 
-              {/* Content */}
+              
               <div className="md:col-span-4">
                 <div className="flex flex-wrap items-start gap-3 mb-3">
                   <span className={`text-white text-xs font-bold px-3 py-1.5 rounded-lg ${tagColor}`}>{tag}</span>

@@ -47,10 +47,10 @@ const WHY = [
 export default function Home() {
   return (
     <main>
-      {/* ── HERO ── */}
+      
       <section className="relative min-h-screen flex items-center overflow-hidden bg-linear-to-br from-slate-50 via-blue-50/40 to-indigo-50/60 pt-16">
 
-        {/* Background decorations */}
+        
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-20 right-[8%] w-96 h-96 rounded-full bg-blue-200/25 blur-3xl" />
           <div className="absolute bottom-20 left-[5%]  w-72 h-72 rounded-full bg-indigo-200/25 blur-3xl" />
@@ -59,22 +59,22 @@ export default function Home() {
 
         <div className="relative max-w-6xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-16 items-center">
 
-          {/* Left */}
+          
           <div>
             <div className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest text-blue-600 uppercase bg-blue-50 border border-blue-100 px-4 py-2 rounded-full mb-8 opacity-0 animate-fade-up">
               <span className="w-1.5 h-1.5 rounded-full bg-blue-500 inline-block" />
-              Japanese Learning for Japan-Bound Students
+              Learn digitally here
             </div>
 
             <h1 className="font-display text-5xl lg:text-6xl font-bold text-slate-900 leading-[1.1] mb-6 opacity-0 animate-fade-up delay-1">
               Your path to
               <span className="block text-blue-600 italic">Japan starts</span>
-              with language.
+              with AI Pathsala.
             </h1>
 
             <p className="text-lg text-slate-600 leading-relaxed mb-10 max-w-lg opacity-0 animate-fade-up delay-2">
-              AI Pathsala helps Nepali students master Japanese — structurally, practically,
-              and confidently — so they can thrive in Japan from day one.
+              AI Pathsala helps Nepali students master Japanese  structurally, practically,
+              and confidently  so they can thrive in Japan from day one.
             </p>
 
             <div className="flex flex-wrap gap-4 opacity-0 animate-fade-up delay-3">
@@ -82,7 +82,7 @@ export default function Home() {
                 to="/services"
                 className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-7 py-3.5 rounded-xl shadow-lg shadow-blue-200 hover:shadow-blue-300 hover:-translate-y-0.5 transition-all duration-200"
               >
-                Explore Services <ArrowRight size={17} />
+                Services <ArrowRight size={17} />
               </Link>
               <Link
                 to="/contact"
@@ -137,7 +137,7 @@ export default function Home() {
                 <span className="text-base">🎌</span> JLPT N5 Ready
               </div>
               <div className="absolute -bottom-4 -left-6 bg-white rounded-2xl shadow-lg border border-slate-100 px-4 py-2.5 flex items-center gap-2 text-xs font-semibold text-slate-700">
-                <span className="text-base"></span> 14-day streak!
+                <span className="text-base"></span> 
               </div>
             </div>
           </div>
@@ -182,7 +182,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── WHY CHOOSE US ── */}
+      
       <section className="py-24 bg-linear-to-br from-blue-600 to-indigo-700 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-white/5 blur-3xl" />
@@ -211,7 +211,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── FINAL CTA ── */}
+      
       <section className="py-24 bg-slate-950">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <p className="text-xs font-bold tracking-widest text-blue-400 uppercase mb-4">Ready to Begin?</p>
@@ -232,9 +232,9 @@ export default function Home() {
             </Link>
             <Link
               to="/services"
-              className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/15 text-white font-semibold px-8 py-4 rounded-xl border border-white/20 transition-all duration-200"
+              className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg shadow-blue-900/40 hover:-translate-y-0.5"
             >
-              View Services
+              Services <ArrowRight size={17} />
             </Link>
           </div>
         </div>
