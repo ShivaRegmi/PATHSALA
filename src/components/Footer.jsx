@@ -109,7 +109,8 @@ export default function Footer() {
       <div className="border-t border-slate-800">
         <div className="max-w-6xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs text-slate-500">© {new Date().getFullYear()} AI Pathsala. All rights reserved.</p>
-          <p className="text-xs text-slate-500">Made by Shiva Regmi</p>
+          <p className="text-xs text-slate-500">Made by Anonymus
+          </p>
         </div>
       </div>
     </footer>
