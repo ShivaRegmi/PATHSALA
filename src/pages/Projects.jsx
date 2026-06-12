@@ -128,7 +128,7 @@ export default function Projects() {
           </p>
           <Link
             to="/contact"
-            className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg shadow-blue-900/40 hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2  bg-yellow-300 hover:bg-yellow-500 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg shadow-blue-900/40 hover:-translate-y-0.5"
           >
             Get In Touch <ArrowRight size={17} />
           </Link>

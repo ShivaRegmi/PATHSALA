@@ -5,43 +5,46 @@ import { BookOpen, Globe2, GraduationCap, Sparkles, ArrowRight, CheckCircle, Sma
 const SERVICES = [
   {
     Icon: BookOpen,
-    title: 'Japanese Language Learning',
-    tagline: 'From zero to fluent — systematically.',
-    desc: 'A structured curriculum covering Hiragana, Katakana, Kanji, vocabulary, grammar, and conversation — all optimised for Nepali learners heading to Japan.',
+    title: 'Interactive Digital Learning',
+    tagline: 'Learn smarter through conversation and interaction.',
+    desc: 'An engaging learning experience powered by AI characters, immersive lessons, real-time practice, and structured skill development designed for modern students.',
     points: [
-      'Beginner to advanced levels (N5 → N2)',
-      'Daily bite-sized lessons via our dedicated app',
-      'Listening, speaking, reading and writing skills',
-      'Vocabulary sets tuned for student and work life in Japan',
+      'Structured learning from beginner to advanced levels',
+  'Daily bite-sized interactive lessons through the platform',
+  'Balanced skill development: listening, speaking, reading, and writing',
+  'Practical vocabulary designed for real-world communication and work scenarios', 
     ],
     color: 'blue',
   },
   {
-    Icon: GraduationCap,
-    title: 'JLPT Exam Preparation',
-    tagline: 'Pass the test. Prove your fluency.',
-    desc: 'Comprehensive preparation for the Japanese Language Proficiency Test — the internationally recognised standard required by Japanese universities and employers.',
-    points: [
-      'Full mock exams for N5, N4, N3 and N2',
-      'Timed practice sessions with instant feedback',
-      'Common mistake analysis and targeted review',
-      'Test-taking strategy and pacing guidance',
-    ],
+
+  Icon: GraduationCap,
+  title: 'Structured Proficiency Assessment',
+  tagline: 'Build confidence through measurable progress.',
+  desc: 'A comprehensive assessment and practice system designed to evaluate and strengthen language skills through structured levels, mock evaluations, and guided improvement feedback.',
+  points: [
+    'Level-based mock assessments for structured skill evaluation',
+    'Timed practice sessions with instant performance feedback',
+    'Error analysis with focused improvement suggestions',
+    'Guidance on effective learning strategies and progress optimization',
+  ],
+
+
     color: 'indigo',
   },
   {
-    Icon: Globe2,
-    title: 'Japan Study Preparation',
-    tagline: 'Understand Japan before you arrive.',
-    desc: 'Language is only one part of studying abroad. We prepare students for Japanese academic culture, social norms, and daily life through curated orientation content.',
-    points: [
-      'Academic culture and classroom etiquette',
-      'Navigating Japanese bureaucracy and paperwork',
-      'Housing, transport and everyday living',
-      'Cultural do and donts for new arrivals',
-    ],
-    color: 'cyan',
-  },
+  Icon: Globe2,
+  title: 'Global Academic Readiness',
+  tagline: 'Prepare for international academic environments with confidence.',
+  desc: 'Beyond language learning, this module helps students understand academic expectations, social systems, and everyday practical knowledge needed for studying abroad.',
+  points: [
+    'Academic environment and classroom behavior guidelines',
+    'Understanding administrative systems and essential procedures',
+    'Housing, transport, and daily life management skills',
+    'Cultural awareness for smooth social adaptation',
+  ],
+  color: 'cyan',
+},
   {
     Icon: Smartphone,
     title: 'AI Pathsala Dedicated App',
@@ -74,11 +77,11 @@ export default function Services() {
           
           <h1 className="font-display text-5xl font-bold text-slate-900 mb-5 leading-tight">
             Services built for<br />
-            <span className="text-blue-600 italic">Japan-bound students</span>
+            <span className="text-blue-600 italic">Every curious students</span>
           </h1>
           <p className="text-slate-500 text-lg max-w-2xl mx-auto leading-relaxed">
-            Every service we offer is designed around a single mission: prepare Nepali students
-            to master Japanese and thrive in Japan.
+           Every feature we build focuses on one goal: delivering structured, interactive, and engaging digital learning experiences that help students grow confidently and effectively.
+
           </p>
         </div>
       </section>
@@ -129,11 +132,11 @@ export default function Services() {
             Ready to get started?
           </h2>
           <p className="text-slate-400 mb-8 leading-relaxed">
-            Reach out to us and we'll help you find the right starting point for your Japan journey.
+            Reach out to us and we'll help you find the right starting point for your journey.
           </p>
           <Link
             to="/contact"
-            className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg shadow-blue-900/40 hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2 bg-yellow-300 hover:bg-yellow-500 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg shadow-blue-900/40 hover:-translate-y-0.5"
           >
             Contact Us <ArrowRight size={17} />
           </Link>

@@ -13,11 +13,11 @@ const QUICK = [
 ]
 
 const SERVICES = [
-  'Japanese Language Learning',
-  'JLPT Preparation',
-  'Japan Study Guidance',
-  'AI-Powered Practice',
-  'Cultural Orientation',
+ 'Interactive AI Conversations',
+ 'Immersive Digital Learning',
+ 'Real-Time Practice Sessions',
+ 'Personalized Skill Development',
+ 'Smart Progress Tracking',
 ]
 
 export default function Footer() {
@@ -29,7 +29,8 @@ export default function Footer() {
         <div className="lg:col-span-1">
           <img src={logo} alt="AI Pathsala" className="h-9 w-auto object-contain brightness-0 invert opacity-90 mb-4" />
           <p className="text-sm leading-relaxed mb-6">
-            Helping students master Japanese and confidently prepare for life and study in Japan.
+           Helping students learn, practice, and grow through interactive AI-powered education.
+
           </p>
           <div className="flex gap-3">
             {[

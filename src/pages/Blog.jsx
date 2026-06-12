@@ -7,58 +7,58 @@ const POSTS = [
     id: 1,
     category: 'Language Learning',
     catColor: 'bg-blue-100 text-blue-700',
-    title: 'How to Learn Japanese Faster: 7 Proven Strategies for Beginners',
-    excerpt: 'Most students take years to reach conversational Japanese. These seven research-backed strategies will help you cut that time significantly — even if you\'re starting from zero.',
+    title: 'How to Learn Faster: 7 Proven Strategies for Beginners',
+    excerpt: 'Most learners take years to become confident. These seven practical strategies help you accelerate progress even if you are starting from zero.',
     readTime: '6 min read',
     date: 'May 2025',
     featured: true,
   },
   {
     id: 2,
-    category: 'JLPT',
+    category: 'Structured Learning',
     catColor: 'bg-indigo-100 text-indigo-700',
-    title: 'The Complete JLPT N5 Study Guide for Nepali Students',
-    excerpt: 'JLPT N5 is the starting point for most Japan-bound students. Here\'s everything you need to know — syllabus, study timeline, resources, and common mistakes to avoid.',
+    title: 'Complete Beginner Learning Guide',
+    excerpt: 'A clear starting roadmap covering essential foundations, study structure, and common mistakes to avoid when beginning your learning journey.',
     readTime: '9 min read',
     date: 'April 2025',
     featured: false,
   },
   {
     id: 3,
-    category: 'Life in Japan',
+    category: 'Life Skills',
     catColor: 'bg-cyan-100 text-cyan-700',
-    title: 'Life in Japan for International Students: What Nobody Tells You',
-    excerpt: 'From navigating the konbini to understanding senpai-kohai dynamics — honest advice from students who made the move from Nepal to Japan.',
+    title: 'Adapting to a New Environment: What Students Often Miss',
+    excerpt: 'Practical insights on communication styles, routines, and cultural expectations that influence real-world adaptation.',
     readTime: '7 min read',
     date: 'April 2025',
     featured: false,
   },
   {
     id: 4,
-    category: 'Study Tips',
+    category: 'Study Techniques',
     catColor: 'bg-violet-100 text-violet-700',
-    title: 'Hiragana in 7 Days: The Mnemonic Method That Actually Works',
-    excerpt: 'Hiragana feels impossible at first — 46 characters with no obvious pattern. This mnemonic approach has helped hundreds of our students master it in under a week.',
+    title: 'Learning Basics in 7 Days: A Memory-Based Approach',
+    excerpt: 'A structured method to quickly grasp foundational concepts using repetition, association, and daily practice.',
     readTime: '5 min read',
     date: 'March 2025',
     featured: false,
   },
   {
     id: 5,
-    category: 'Japan Prep',
+    category: 'Guides',
     catColor: 'bg-emerald-100 text-emerald-700',
-    title: 'Japanese Student Visa: A Step-by-Step Guide for Nepali Applicants',
-    excerpt: 'The visa process is one of the most stressful parts of going to Japan. We break it down into a clear, actionable checklist — from document prep to the interview.',
+    title: 'Step-by-Step Application Preparation Guide',
+    excerpt: 'A structured checklist covering documentation, preparation steps, and common errors to avoid during application processes.',
     readTime: '8 min read',
     date: 'March 2025',
     featured: false,
   },
   {
     id: 6,
-    category: 'Language Learning',
+    category: 'Learning Insight',
     catColor: 'bg-blue-100 text-blue-700',
-    title: 'Why Grammar Rules Alone Won\'t Make You Fluent in Japanese',
-    excerpt: 'Textbook Japanese and real Japanese are very different. Understanding why — and what to do about it — is the key insight that separates fast learners from slow ones.',
+    title: 'Why Memorization Alone Does Not Lead to Mastery',
+    excerpt: 'Understanding why passive learning is ineffective and how active application improves long-term retention and skill development.',
     readTime: '5 min read',
     date: 'February 2025',
     featured: false,
@@ -74,14 +74,17 @@ export default function Blog() {
       
       <section className="bg-linear-to-br from-slate-50 to-blue-50/50 py-20">
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <p className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest text-blue-600 uppercase bg-blue-50 border border-blue-100 px-4 py-2 rounded-full mb-8 opacity-0 animate-fade-up">Resources</p>
+          <p className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest text-blue-600 uppercase bg-blue-50 border border-blue-100 px-4 py-2 rounded-full mb-8 opacity-0 animate-fade-up">
+            Resources
+          </p>
+
           <h1 className="font-display text-5xl font-bold text-slate-900 mb-5 leading-tight">
-            Insights for Japan-bound<br />
-            <span className="text-blue-600 italic">students</span>
+            Insights for learners<br />
+            <span className="text-blue-600 italic">and structured growth</span>
           </h1>
+
           <p className="text-slate-500 text-lg max-w-xl mx-auto leading-relaxed">
-            Practical guides, language tips, and honest advice for Nepali students
-            preparing to study, work, or live in Japan.
+            Practical guides, learning strategies, and structured insights designed to improve skill development and consistency.
           </p>
         </div>
       </section>
@@ -104,12 +107,15 @@ export default function Blog() {
                     <Clock size={12} /> {featured.readTime}
                   </span>
                 </div>
+
                 <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 max-w-2xl leading-tight">
                   {featured.title}
                 </h2>
+
                 <p className="text-blue-100 text-lg leading-relaxed max-w-2xl mb-8">
                   {featured.excerpt}
                 </p>
+
                 <button className="inline-flex items-center gap-2 bg-white text-blue-700 font-bold px-6 py-3 rounded-xl hover:bg-blue-50 transition-colors">
                   Read Article <ArrowRight size={16} />
                 </button>
@@ -117,28 +123,32 @@ export default function Blog() {
             </div>
           )}
 
-          {/* Post grid */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {rest.map(({ id, category, catColor, title, excerpt, readTime, date }) => (
               <article
                 key={id}
                 className="group bg-white border border-slate-100 rounded-2xl overflow-hidden hover:shadow-lg hover:border-blue-100 transition-all duration-300 hover:-translate-y-1"
               >
-                {/* Colour bar */}
                 <div className="h-1 bg-linear-to-r from-blue-500 to-cyan-400" />
+
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-4">
-                    <span className={`text-xs font-bold px-2.5 py-1 rounded-lg ${catColor}`}>{category}</span>
+                    <span className={`text-xs font-bold px-2.5 py-1 rounded-lg ${catColor}`}>
+                      {category}
+                    </span>
                     <span className="flex items-center gap-1.5 text-xs text-slate-400">
                       <Clock size={11} /> {readTime}
                     </span>
                   </div>
+
                   <h3 className="font-display font-bold text-slate-900 text-lg leading-snug mb-3 group-hover:text-blue-700 transition-colors">
                     {title}
                   </h3>
+
                   <p className="text-sm text-slate-500 leading-relaxed mb-5 line-clamp-3">
                     {excerpt}
                   </p>
+
                   <div className="flex items-center justify-between">
                     <span className="text-xs text-slate-400">{date}</span>
                     <button className="flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:gap-2.5 transition-all">
@@ -152,23 +162,27 @@ export default function Blog() {
         </div>
       </section>
 
-      {/* Newsletter */}
       <section className="py-20 bg-slate-50">
         <div className="max-w-xl mx-auto px-6 text-center">
-          <p className="text-xs font-bold tracking-widest text-blue-600 uppercase mb-3">Stay Updated</p>
-          <h2 className="font-display text-3xl font-bold text-slate-900 mb-4">
-            Get articles in your inbox
-          </h2>
-          <p className="text-slate-500 mb-8 leading-relaxed">
-            New guides, tips, and Japan prep resources — delivered monthly. No spam.
+          <p className="text-xs font-bold tracking-widest text-blue-600 uppercase mb-3">
+            Stay Updated
           </p>
+
+          <h2 className="font-display text-3xl font-bold text-slate-900 mb-4">
+            Get learning insights directly
+          </h2>
+
+          <p className="text-slate-500 mb-8 leading-relaxed">
+            Structured learning tips, guides, and strategies delivered periodically. No spam.
+          </p>
+
           <div className="flex gap-3">
             <input
               type="email"
               placeholder="your@email.com"
               className="flex-1 border border-slate-200 rounded-xl px-4 py-3 text-sm outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-100 transition-all"
             />
-            <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-xl transition-colors shrink-0">
+            <button className="bg-yellow-300 hover:bg-yellow-500 text-black font-semibold px-6 py-3 rounded-xl transition-colors shrink-0">
               Subscribe
             </button>
           </div>

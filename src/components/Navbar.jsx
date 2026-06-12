@@ -42,9 +42,18 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
 
         {/* Logo */}
-        <Link to="/" onClick={handleNavClick} className="flex items-center gap-2 shrink-0">
-          <img src={logo} alt="AI Pathsala" className="h-9 w-auto object-contain" />
-        </Link>
+       <Link
+  to="/"
+  onClick={handleNavClick}
+  className="flex items-center gap-2 shrink-0"
+>
+  <img
+    src={logo}
+    alt="AI Pathsala"
+    className="h-9 w-auto object-contain block border-0 outline-none shadow-none"
+    draggable="false"
+  />
+</Link>
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-1">
@@ -71,7 +80,7 @@ export default function Navbar() {
         <Link
           to="/contact"
           onClick={handleNavClick}
-          className="hidden md:inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition-all duration-200 shadow-md shadow-blue-200 hover:shadow-blue-300 hover:-translate-y-0.5"
+          className="hidden md:inline-flex items-center gap-2  bg-yellow-300 hover:bg-yellow-500 text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition-all duration-200 shadow-md shadow-blue-200 hover:shadow-blue-300 hover:-translate-y-0.5"
         >
           Get Started
         </Link>
