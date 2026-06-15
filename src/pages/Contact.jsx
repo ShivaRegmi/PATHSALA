@@ -15,7 +15,7 @@ export default function Contact() {
     if (!form.email.trim())                         e.email   = 'Email is required'
     else if (!/\S+@\S+\.\S+/.test(form.email))     e.email   = 'Enter a valid email'
     if (!form.message.trim())                       e.message = 'Message is required'
-    else if (form.message.trim().length < 10)       e.message = 'Message must be at least 10 characters'
+    else if (form.message.trim().length < 5)       e.message = 'Message must be at least 5 characters'
     return e
   }
 
@@ -201,7 +201,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={status === 'loading'}
-                className="w-full flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 disabled:cursor-not-allowed text-white font-semibold py-3.5 rounded-xl transition-all duration-200 shadow-md shadow-blue-200 hover:shadow-blue-300 hover:-translate-y-0.5 disabled:translate-y-0"
+                className="w-full flex items-center justify-center gap-2  bg-yellow-300 hover:bg-yellow-500 disabled:bg-blue-400 disabled:cursor-not-allowed text-black font-semibold py-3.5 rounded-xl transition-all duration-200 shadow-md shadow-blue-200 hover:shadow-blue-300 hover:-translate-y-0.5 disabled:translate-y-0"
               >
                 {status === 'loading' ? (
                   <>

@@ -63,7 +63,7 @@ export default function Home() {
           {/* BADGE — centered above the grid */}
           <div className="flex justify-center mb-8">
             <div className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest text-blue-600 uppercase bg-blue-50 border border-blue-100 px-4 py-2 rounded-full opacity-0 animate-fade-up">
-              <span className="w-1.5 h-1.5 rounded-full bg-blue-500 inline-block" />
+              <span className="bg-blue-500 inline-block"/>
               Learn digitally
             </div>
           </div>
@@ -92,15 +92,15 @@ export default function Home() {
                   <div className="space-y-4">
                     <div className="flex justify-between">
                       <span className="text-slate-500">Active Learners</span>
-                      <span className="font-semibold text-slate-900">1,200+</span>
+                      <span className="font-semibold text-slate-900">800+</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-slate-500">Learning Modules</span>
                       <span className="font-semibold text-slate-900">50+</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-slate-500">AI Practice Sessions</span>
-                      <span className="font-semibold text-slate-900">Daily</span>
+                      <span className="text-slate-500">AI Practice Sessions </span>
+                      <span className="font-semibold text-slate-900">Weekly</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-slate-500">Completion Rate</span>
@@ -133,11 +133,11 @@ export default function Home() {
             <p className="text-xs font-bold tracking-widest text-blue-600 uppercase mb-3">What We Do</p>
             <h2 className="font-display text-4xl font-bold text-slate-900 mb-4">
               Everything you need to<br />
-              <span className="text-blue-600 italic">succeed in Japan</span>
+              <span className="text-blue-600 italic">succeed</span>
             </h2>
             <p className="text-slate-500 max-w-xl mx-auto leading-relaxed">
               We built AI Pathsala for one purpose: give Nepali students a structured,
-              effective path to Japanese fluency and Japan readiness.
+              effective path to fluency and readiness.
             </p>
           </div>
 
