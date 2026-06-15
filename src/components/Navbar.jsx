@@ -126,7 +126,7 @@ export default function Navbar() {
                 window.scrollTo({ top: 0, behavior: 'instant' })
                 setOpen(false)
               }}
-              className="mt-2 text-center bg-blue-600 text-white text-sm font-semibold px-5 py-3 rounded-xl"
+              className="mt-2 text-center bg-yellow-300 hover:bg-yellow-500 text-sm font-semibold px-5 py-3 rounded-xl"
             >
               Get Started
             </Link>
