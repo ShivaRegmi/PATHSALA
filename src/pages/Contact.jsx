@@ -158,7 +158,7 @@ export default function Contact() {
                   type="text"
                   value={form.name}
                   onChange={handleChange}
-                  placeholder="Anika Shrestha"
+                  placeholder="Shiva Regmi"
                   className={inputClass('name')}
                 />
                 {errors.name && <p className="mt-1.5 text-xs text-red-600 flex items-center gap-1"><AlertCircle size={11} />{errors.name}</p>}
@@ -175,7 +175,7 @@ export default function Contact() {
                   type="email"
                   value={form.email}
                   onChange={handleChange}
-                  placeholder="anika@example.com"
+                  placeholder="shivaregmi@gmail.com"
                   className={inputClass('email')}
                 />
                 {errors.email && <p className="mt-1.5 text-xs text-red-600 flex items-center gap-1"><AlertCircle size={11} />{errors.email}</p>}
