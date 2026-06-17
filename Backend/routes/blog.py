@@ -143,7 +143,7 @@ async def update_blog(
 
     return post
 
-
+ # router delete blog post here okay?
 @router.delete(
     "/{slug}",
     response_model=dict,

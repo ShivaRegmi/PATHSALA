@@ -79,4 +79,5 @@ async def unsubscribe(
     record.is_active = False
     await db.commit()
 
-    return MessageOut(success=True, message="You've been unsubscribed.")
+    return MessageOut(success=True, message="You've been unsubscribed!")
+
