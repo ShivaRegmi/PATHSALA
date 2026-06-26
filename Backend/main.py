@@ -26,9 +26,9 @@ async def lifespan(app: FastAPI):
 
 # ── App ───────────────────────────────────────────────────────────────────────
 app = FastAPI(
-    title="AI Pathsala API",
+    title="AI Pathsala",
     description=(
-        "Backend API for the AI Pathsala website.\n\n"
+        "Backend API for the AIPathsala website.\n\n"
         "Handles contact form submissions, newsletter subscriptions, and blog posts."
     ),
     version="1.0.0",
@@ -37,3 +37,24 @@ app = FastAPI(
     redoc_url="/redoc",
 )
 
+# Allow requests from the React frontend
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+# Registered API routes
+app.include_router(contact_router)
+app.include_router(subscriber_router)
+app.include_router(blog_router)
+
+
+@app.get("/")
+async def root():
+    return {"message": "AI Pathsala Backend is running!"}
