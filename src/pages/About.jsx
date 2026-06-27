@@ -71,7 +71,7 @@ export default function About() {
               </p>
             </div>
 
-            <div className="mt-8 space-y-3">
+            <div className="mt-8 space-y-2">
               {[
                 'Based in Kathmandu, Nepal',
                 '1,200+ learners onboarded',

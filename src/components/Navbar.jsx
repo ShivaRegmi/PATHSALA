@@ -76,7 +76,7 @@ export default function Navbar() {
           })}
         </nav>
 
-        {/* CTA */}
+     
         <Link
           to="/contact"
           onClick={handleNavClick}
@@ -85,7 +85,7 @@ export default function Navbar() {
           Get Started
         </Link>
 
-        {/* Hamburger */}
+     
         <button
           onClick={() => setOpen(p => !p)}
           className="md:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100 transition-colors"
@@ -95,7 +95,7 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile drawer */}
+
       {open && (
         <div className="md:hidden bg-white border-t border-slate-100 shadow-lg">
           <div className="max-w-6xl mx-auto px-6 py-3 flex flex-col gap-1">

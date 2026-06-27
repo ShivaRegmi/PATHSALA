@@ -22,8 +22,8 @@ const SERVICES = [
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-950 text-slate-400 mt-24">
-      <div className="max-w-6xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+    <footer className="bg-slate-950 text-slate-400 ">
+      <div className="max-w-6xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
         {/* Brand */}
         <div className="lg:col-span-1">
@@ -54,7 +54,7 @@ export default function Footer() {
         
         <div>
           <h4 className="text-white text-xs font-bold tracking-widest uppercase mb-5">Quick Links</h4>
-          <ul className="space-y-3">
+          <ul className="space-y-2">
             {QUICK.map(({ to, label }) => (
               <li key={to}>
                 <Link to={to} className="flex items-center gap-2 text-sm hover:text-blue-400 transition-colors">
@@ -69,7 +69,7 @@ export default function Footer() {
         
         <div>
           <h4 className="text-white text-xs font-bold tracking-widest uppercase mb-5">Services</h4>
-          <ul className="space-y-3">
+          <ul className="space-y-2">
             {SERVICES.map(s => (
               <li key={s} className="flex items-center gap-2 text-sm">
                 <ArrowRight size={13} className="shrink-0" />
@@ -82,7 +82,7 @@ export default function Footer() {
         
         <div>
           <h4 className="text-white text-xs font-bold tracking-widest uppercase mb-5">Contact</h4>
-          <div className="space-y-4 text-sm">
+          <div className="space-y-2 text-sm">
             <div className="flex items-start gap-3">
               <Mail size={15} className="text-blue-400 shrink-0 mt-0.5" />
               <div className="space-y-1">
@@ -107,7 +107,7 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-slate-800">
-        <div className="max-w-6xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <div className="max-w-6xl mx-auto px-6 py-3 flex flex-col sm:flex-row items-center justify-between gap-2">
           <p className="text-xs text-slate-500">© {new Date().getFullYear()} AI Pathsala. All rights reserved.</p>
           <p className="text-xs text-slate-500">Made by Anonymus
           </p>
