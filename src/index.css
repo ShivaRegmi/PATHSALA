@@ -1,14 +1,121 @@
 @import "tailwindcss";
 
 @theme {
-  --font-display: 'Fraunces', serif;
-  --font-body: 'Outfit', sans-serif;
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
 
-  --color-brand-500: #3b82f6;
+  --color-brand-500: #2563eb;
   --color-ink-900: #0f172a;
   --color-ink-100: #f1f5f9;
   --color-accent: #06b6d4;
 }
+
+/* Premium Button Design System */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.95rem 1.75rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.15);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px 0 rgba(37, 99, 235, 0.3);
+  filter: brightness(1.05);
+}
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.95rem 1.75rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  background: rgba(15, 23, 42, 0.8);
+  border-color: rgba(6, 182, 212, 0.4);
+  box-shadow: 0 4px 20px 0 rgba(6, 182, 212, 0.15);
+}
+.btn-secondary:active {
+  transform: translateY(0);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #2563eb;
+  font-weight: 750;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.2s;
+}
+.btn-ghost:hover {
+  color: #1d4ed8;
+  transform: translateX(2px);
+}
+
+/* Premium Card System */
+.card-interactive {
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.04);
+  box-shadow: 0 4px 20px 0 rgba(15, 23, 42, 0.02);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.card-interactive:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 12px 32px 0 rgba(15, 23, 42, 0.06);
+  border-color: rgba(37, 99, 235, 0.15);
+}
+
+.card-interactive-dark {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.card-interactive-dark:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 12px 32px 0 rgba(6, 182, 212, 0.15);
+  border-color: rgba(6, 182, 212, 0.3);
+}
+
+/* Section Transitions dividers */
+.divider-glow {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(6, 182, 212, 0.2), transparent);
+}
+
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -22,7 +129,7 @@ html {
 body {
   margin: 0;
   color: var(--color-ink-900);
-  background: #fff;
+  background: #fafafa;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
@@ -74,3 +181,125 @@ input, textarea { font-family: var(--font-body); }
 .page-transition {
   animation: fadeUp 0.4s ease-out;
 }
+
+/* Premium Visual Design System Updates */
+
+/* Glassmorphism Styles */
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+.glass-card-light {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(15, 23, 42, 0.05);
+}
+
+.border-glow {
+  position: relative;
+}
+.border-glow::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(90deg, #00f2fe, #4facfe, #00f2fe);
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0.15;
+  transition: opacity 0.3s;
+}
+.border-glow:hover::after {
+  opacity: 0.4;
+}
+
+/* Section Backgrounds */
+
+/* Hero: Futuristic AI environment mesh */
+.bg-futuristic-ai {
+  background-color: #020617;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(6, 182, 212, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(59, 130, 246, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.05) 0%, transparent 50%);
+}
+
+/* Section 1: Research & Innovation - Dark mesh */
+.bg-research-theme {
+  background-color: #030712;
+  background-image: 
+    radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 20% 80%, rgba(6, 182, 212, 0.08) 0%, transparent 40%);
+}
+
+/* Section 2: Technology Network - Grid lines */
+.bg-network-theme {
+  background-color: #020617;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.007) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.007) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Section 3: Educational Ecosystem - Soft light mesh */
+.bg-edtech-theme {
+  background-color: #f8fafc;
+  background-image: 
+    radial-gradient(circle at 10% 10%, rgba(59, 130, 246, 0.03) 0%, transparent 30%),
+    radial-gradient(circle at 90% 90%, rgba(6, 182, 212, 0.03) 0%, transparent 30%);
+}
+
+/* Section 4: Global Collaboration - Indigo space */
+.bg-global-collab {
+  background-color: #050515;
+  background-image: 
+    radial-gradient(circle at 50% 10%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 50% 90%, rgba(6, 182, 212, 0.05) 0%, transparent 50%);
+}
+
+/* Section 5: Future Vision - Mesh */
+.bg-future-vision {
+  background: radial-gradient(circle at top right, rgba(99, 102, 241, 0.08) 0%, transparent 50%),
+              radial-gradient(circle at bottom left, rgba(6, 182, 212, 0.08) 0%, transparent 50%),
+              #030712;
+}
+
+/* Section 6: Data Intelligence - terminal mesh */
+.bg-data-intel {
+  background-color: #020617;
+  background-image: 
+    linear-gradient(rgba(6, 182, 212, 0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(6, 182, 212, 0.015) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Section 7: Innovation Lab - Mesh glows */
+.bg-innov-lab {
+  background-color: #030712;
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.06) 0%, transparent 60%);
+}
+
+/* Extra premium animations */
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.15; }
+  50% { opacity: 0.3; }
+}
+
+.pulse-glow {
+  animation: pulseGlow 8s ease-in-out infinite;
+}
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 40s linear infinite;
+}
