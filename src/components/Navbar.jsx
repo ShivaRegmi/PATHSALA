@@ -53,7 +53,17 @@ const COMPANY_LINKS = [
   { to: '/careers', label: 'Careers' },
   { to: '/about#timeline', label: 'Company Timeline' }
 ]
-
+const LINKS = [
+  { to: "/", label: "Home" },
+  { to: "/services", label: "Services" },
+  { to: "/knowledge-hub", label: "Education" },
+  { to: "/research", label: "Research" },
+  { to: "/research-library", label: "Library" },
+  { to: "/events", label: "Events" },
+  { to: "/projects", label: "Projects" },
+  { to: "/about", label: "About" },
+  { to: "/contact", label: "Contact" },
+]
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
@@ -82,13 +92,13 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled || open
-          ? 'bg-slate-900/98 backdrop-blur-md shadow-lg border-b border-slate-800'
-          : 'bg-slate-900/90 backdrop-blur-xs'
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-18 text-white">
+  className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    scrolled
+      ? 'bg-white/95 backdrop-blur-md shadow-md border-b border-slate-200'
+      : 'bg-black/30 backdrop-blur-sm'
+  }`}
+>
+      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
 
         {/* Logo */}
         <Link
@@ -105,155 +115,34 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden lg:flex items-center gap-1">
-          {/* Services Dropdown */}
-          <div 
-            className="relative group py-5"
-            onMouseEnter={() => setActiveDropdown('services')}
-            onMouseLeave={() => setActiveDropdown(null)}
-          >
-            <button className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-semibold text-slate-300 hover:text-white hover:bg-slate-800 transition-all cursor-pointer">
-              Services <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-200" />
-            </button>
-            <div className="absolute top-full left-1/2 -translate-x-1/2 w-[540px] bg-slate-900 border border-slate-850 rounded-2xl p-6 shadow-2xl transition-all duration-200 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto grid grid-cols-2 gap-x-6 gap-y-2 mt-1">
-              <div className="col-span-2 border-b border-slate-800 pb-3 mb-2">
-                <span className="text-xs font-bold text-cyan-400 uppercase tracking-widest flex items-center gap-1.5"><Layers size={12} /> Tech & Consulting</span>
-              </div>
-              {SERVICES_LINKS.map(link => (
-                <Link
-                  key={link.to}
-                  to={link.to}
-                  onClick={handleNavClick}
-                  className="px-3.5 py-2 rounded-xl text-xs font-semibold text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </div>
-          </div>
+        <nav className="hidden lg:flex items-center gap-2">
+  {LINKS.map(({ to, label }) => {
+    const active = location.pathname === to
 
-          {/* Education Dropdown */}
-          <div 
-            className="relative group py-5"
-            onMouseEnter={() => setActiveDropdown('education')}
-            onMouseLeave={() => setActiveDropdown(null)}
-          >
-            <button className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-semibold text-slate-300 hover:text-white hover:bg-slate-800 transition-all cursor-pointer">
-              Education <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-200" />
-            </button>
-            <div className="absolute top-full left-0 w-64 bg-slate-900 border border-slate-850 rounded-2xl p-4 shadow-2xl transition-all duration-200 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto flex flex-col gap-1 mt-1">
-              <span className="text-xs font-bold text-cyan-400 uppercase tracking-widest px-3.5 py-1 mb-2 flex items-center gap-1.5"><BookOpen size={12} /> Learning Programs</span>
-              {EDUCATION_LINKS.map(link => (
-                <Link
-                  key={link.to}
-                  to={link.to}
-                  onClick={handleNavClick}
-                  className="px-3.5 py-2 rounded-xl text-xs font-semibold text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          {/* Research Dropdown */}
-          <div 
-            className="relative group py-5"
-            onMouseEnter={() => setActiveDropdown('research')}
-            onMouseLeave={() => setActiveDropdown(null)}
-          >
-            <Link 
-              to="/research"
-              onClick={handleNavClick}
-              className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-semibold text-slate-300 hover:text-white hover:bg-slate-800 transition-all cursor-pointer"
-            >
-              Research <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-200" />
-            </Link>
-            <div className="absolute top-full left-0 w-64 bg-slate-900 border border-slate-850 rounded-2xl p-4 shadow-2xl transition-all duration-200 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto flex flex-col gap-1 mt-1">
-              <span className="text-xs font-bold text-cyan-400 uppercase tracking-widest px-3.5 py-1 mb-2 flex items-center gap-1.5"><Cpu size={12} /> Future Research</span>
-              {RESEARCH_LINKS.map(link => (
-                <Link
-                  key={link.to}
-                  to={link.to}
-                  onClick={handleNavClick}
-                  className="px-3.5 py-2 rounded-xl text-xs font-semibold text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          {/* Programs Dropdown */}
-          <div 
-            className="relative group py-5"
-            onMouseEnter={() => setActiveDropdown('programs')}
-            onMouseLeave={() => setActiveDropdown(null)}
-          >
-            <button className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-semibold text-slate-300 hover:text-white hover:bg-slate-800 transition-all cursor-pointer">
-              Programs <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-200" />
-            </button>
-            <div className="absolute top-full left-1/2 -translate-x-1/2 w-80 bg-slate-900 border border-slate-850 rounded-2xl p-4 shadow-2xl transition-all duration-200 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto flex flex-col gap-1 mt-1">
-              <span className="text-xs font-bold text-cyan-400 uppercase tracking-widest px-3.5 py-1 mb-2 flex items-center gap-1.5"><Handshake size={12} /> Partnerships & Incubation</span>
-              {PROGRAMS_LINKS.map(link => (
-                <Link
-                  key={link.to}
-                  to={link.to}
-                  onClick={handleNavClick}
-                  className="px-3.5 py-2 rounded-xl text-xs font-semibold text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          {/* About Dropdown */}
-          <div 
-            className="relative group py-5"
-            onMouseEnter={() => setActiveDropdown('about')}
-            onMouseLeave={() => setActiveDropdown(null)}
-          >
-            <button className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-semibold text-slate-300 hover:text-white hover:bg-slate-800 transition-all cursor-pointer">
-              Company <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-200" />
-            </button>
-            <div className="absolute top-full right-0 w-60 bg-slate-900 border border-slate-850 rounded-2xl p-4 shadow-2xl transition-all duration-200 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto flex flex-col gap-1 mt-1">
-              <span className="text-xs font-bold text-cyan-400 uppercase tracking-widest px-3.5 py-1 mb-2 flex items-center gap-1.5"><Landmark size={12} /> About Us</span>
-              {COMPANY_LINKS.map(link => (
-                <Link
-                  key={link.to}
-                  to={link.to}
-                  onClick={handleNavClick}
-                  className="px-3.5 py-2 rounded-xl text-xs font-semibold text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          <Link
-            to="/projects"
-            onClick={handleNavClick}
-            className="px-3 py-2 rounded-lg text-sm font-semibold text-slate-300 hover:text-white hover:bg-slate-800 transition-all"
-          >
-            Projects
-          </Link>
-
-          <Link
-            to="/blog"
-            onClick={handleNavClick}
-            className="px-3 py-2 rounded-lg text-sm font-semibold text-slate-300 hover:text-white hover:bg-slate-800 transition-all"
-          >
-            Blog
-          </Link>
-        </nav>
+    return (
+      <Link
+        key={to}
+        to={to}
+        onClick={handleNavClick}
+        className={`px-4 py-2 rounded-lg text-[15px] font-medium transition-all duration-300 ${
+          active
+            ? 'bg-blue-600 text-white shadow-md'
+            : scrolled
+            ? 'text-slate-700 hover:text-blue-600 hover:bg-blue-50'
+            : 'text-white hover:text-yellow-300'
+        }`}
+      >
+        {label}
+      </Link>
+    )
+  })}
+</nav>
 
         {/* CTA Button */}
         <Link
           to="/contact"
           onClick={handleNavClick}
-          className="hidden lg:inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold px-5 py-2.5 rounded-xl transition-all duration-200 shadow-md shadow-blue-900/30 hover:scale-[1.02]"
+          className="hidden md:inline-flex items-center gap-2  bg-yellow-300 hover:bg-yellow-500 text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition-all duration-200 shadow-md shadow-blue-200 hover:shadow-blue-300 hover:-translate-y-0.5"
         >
           Get Started <ArrowRight size={14} />
         </Link>
@@ -261,7 +150,7 @@ export default function Navbar() {
         {/* Mobile menu trigger */}
         <button
           onClick={() => setOpen(p => !p)}
-          className="lg:hidden p-2 rounded-lg text-slate-300 hover:bg-slate-800 transition-colors cursor-pointer"
+          className="md:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100 transition-colors"
           aria-label="Toggle menu"
         >
           {open ? <X size={22} /> : <Menu size={22} />}
@@ -270,124 +159,36 @@ export default function Navbar() {
 
       {/* Mobile Nav Overlay */}
       {open && (
-        <div className="lg:hidden bg-slate-900 border-t border-slate-800 max-h-[calc(100vh-4.5rem)] overflow-y-auto">
-          <div className="px-6 py-6 flex flex-col gap-3">
-            
-            {/* Services */}
-            <div>
-              <button 
-                onClick={() => toggleMobileDropdown('services')}
-                className="w-full flex items-center justify-between text-sm font-bold text-slate-200 py-2 border-b border-slate-850"
-              >
-                <span>Services</span>
-                <ChevronDown size={16} className={`transition-transform duration-200 ${activeDropdown === 'services' ? 'rotate-180 text-cyan-400' : ''}`} />
-              </button>
-              {activeDropdown === 'services' && (
-                <div className="flex flex-col gap-1 pl-4 mt-2 border-l border-slate-800">
-                  {SERVICES_LINKS.map(link => (
-                    <Link key={link.to} to={link.to} onClick={() => setOpen(false)} className="text-xs font-semibold text-slate-400 py-2.5">
-                      {link.label}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {/* Education */}
-            <div>
-              <button 
-                onClick={() => toggleMobileDropdown('education')}
-                className="w-full flex items-center justify-between text-sm font-bold text-slate-200 py-2 border-b border-slate-850"
-              >
-                <span>Education</span>
-                <ChevronDown size={16} className={`transition-transform duration-200 ${activeDropdown === 'education' ? 'rotate-180 text-cyan-400' : ''}`} />
-              </button>
-              {activeDropdown === 'education' && (
-                <div className="flex flex-col gap-1 pl-4 mt-2 border-l border-slate-800">
-                  {EDUCATION_LINKS.map(link => (
-                    <Link key={link.to} to={link.to} onClick={() => setOpen(false)} className="text-xs font-semibold text-slate-400 py-2.5">
-                      {link.label}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {/* Research */}
-            <div>
-              <button 
-                onClick={() => toggleMobileDropdown('research')}
-                className="w-full flex items-center justify-between text-sm font-bold text-slate-200 py-2 border-b border-slate-850"
-              >
-                <span>Research</span>
-                <ChevronDown size={16} className={`transition-transform duration-200 ${activeDropdown === 'research' ? 'rotate-180 text-cyan-400' : ''}`} />
-              </button>
-              {activeDropdown === 'research' && (
-                <div className="flex flex-col gap-1 pl-4 mt-2 border-l border-slate-800">
-                  <Link to="/research" onClick={() => setOpen(false)} className="text-xs font-bold text-cyan-400 py-2.5">
-                    View Research Portal
-                  </Link>
-                  {RESEARCH_LINKS.map(link => (
-                    <Link key={link.to} to={link.to} onClick={() => setOpen(false)} className="text-xs font-semibold text-slate-400 py-2.5">
-                      {link.label}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {/* Programs */}
-            <div>
-              <button 
-                onClick={() => toggleMobileDropdown('programs')}
-                className="w-full flex items-center justify-between text-sm font-bold text-slate-200 py-2 border-b border-slate-850"
-              >
-                <span>Programs</span>
-                <ChevronDown size={16} className={`transition-transform duration-200 ${activeDropdown === 'programs' ? 'rotate-180 text-cyan-400' : ''}`} />
-              </button>
-              {activeDropdown === 'programs' && (
-                <div className="flex flex-col gap-1 pl-4 mt-2 border-l border-slate-800">
-                  {PROGRAMS_LINKS.map(link => (
-                    <Link key={link.to} to={link.to} onClick={() => setOpen(false)} className="text-xs font-semibold text-slate-400 py-2.5">
-                      {link.label}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {/* Company */}
-            <div>
-              <button 
-                onClick={() => toggleMobileDropdown('about')}
-                className="w-full flex items-center justify-between text-sm font-bold text-slate-200 py-2 border-b border-slate-850"
-              >
-                <span>Company</span>
-                <ChevronDown size={16} className={`transition-transform duration-200 ${activeDropdown === 'about' ? 'rotate-180 text-cyan-400' : ''}`} />
-              </button>
-              {activeDropdown === 'about' && (
-                <div className="flex flex-col gap-1 pl-4 mt-2 border-l border-slate-800">
-                  {COMPANY_LINKS.map(link => (
-                    <Link key={link.to} to={link.to} onClick={() => setOpen(false)} className="text-xs font-semibold text-slate-400 py-2.5">
-                      {link.label}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            <Link to="/projects" onClick={() => setOpen(false)} className="text-sm font-bold text-slate-200 py-2 border-b border-slate-850">
-              Projects
-            </Link>
-
-            <Link to="/blog" onClick={() => setOpen(false)} className="text-sm font-bold text-slate-200 py-2 border-b border-slate-850">
-              Blog
-            </Link>
+        <div className="md:hidden bg-white border-t border-slate-100 shadow-lg">
+          <div className="max-w-6xl mx-auto px-6 py-3 flex flex-col gap-1">
+            {LINKS.map(({ to, label }) => {
+              const active = location.pathname === to
+              return (
+                <Link
+                  key={to}
+                  to={to}
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: 'instant' })
+                    setOpen(false)
+                  }}
+                  className={`px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 ${
+                    active
+                      ? 'bg-blue-50 text-blue-600 font-semibold'
+                      : 'text-slate-600 hover:bg-slate-50'
+                  }`}
+                >
+                  {label}
+                </Link>
+              )
+            })}
 
             <Link
               to="/contact"
-              onClick={() => setOpen(false)}
-              className="mt-4 text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 rounded-xl shadow-lg"
+              onClick={() => {
+                window.scrollTo({ top: 0, behavior: 'instant' })
+                setOpen(false)
+              }}
+              className="mt-2 text-center bg-yellow-300 hover:bg-yellow-500 text-sm font-semibold px-5 py-3 rounded-xl"
             >
               Get Started
             </Link>

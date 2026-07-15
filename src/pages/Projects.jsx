@@ -1,14 +1,63 @@
-import React, { useState } from 'react'
-import { portfolioData } from '../data/portfolioData'
-import { ArrowRight, CheckCircle2, X, ExternalLink, Sparkles, FolderKanban } from 'lucide-react'
-import SEOHead from '../components/SEOHead'
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Smartphone, BookOpen, Globe2, ArrowRight, ExternalLink, CheckCircle } from 'lucide-react'
 
-const CATEGORIES = [
-  { id: 'all', name: 'All Projects' },
-  { id: 'ai', name: 'AI & Data Science' },
-  { id: 'saas', name: 'SaaS Platforms' },
-  { id: 'web', name: 'Web Applications' },
-  { id: 'educational', name: 'Educational Tech' }
+const PROJECTS = [
+  {
+    Icon: Smartphone,
+    tag: 'Main Product',
+    tagColor: 'bg-blue-600',
+    title: 'AI Pathsala App',
+    subtitle: 'The dedicated learning application',
+    desc: 'Our flagship product a mobile-first application that delivers structured language learning for Nepal-based students preparing to go to Abroad. Powered by adaptive AI to personalise each learner\'s path.',
+    features: [
+      
+      'AI-adaptive lesson difficulty',
+      'Daily streak and progress tracking',
+      'Offline learning mode',
+      
+    ],
+    status: 'Under Development',
+    statusColor: 'bg-green-100 text-green-700',
+    bg: 'bg-blue-50',
+    border: 'border-blue-100',
+  },
+  {
+    Icon: BookOpen,
+    tag: 'Education Initiative',
+    tagColor: 'bg-indigo-600',
+    title: 'Digital Matrix Mandala',
+    subtitle: 'Presented at WSC 2025',
+    desc: 'A groundbreaking session presented at the World Sanskrit Conference 2025, exploring the convergence of ancient knowledge systems and modern AI positioning AI Pathsala at the frontier of education innovation.',
+    features: [
+      'Presented at World Sanskrit Conference 2025',
+      'Explored AI in traditional education contexts',
+      'Bridging classical knowledge and modern tech',
+      'International academic audience',
+    ],
+    status: 'Completed',
+    statusColor: 'bg-slate-100 text-slate-600',
+    bg: 'bg-indigo-50',
+    border: 'border-indigo-100',
+  },
+  {
+    Icon: Globe2,
+    tag: 'Event',
+    tagColor: 'bg-violet-600',
+    title: '19th World Sanskrit Conference',
+    subtitle: 'Co-organiser, 2025',
+    desc: 'AI Pathsala proudly co-organised the 19th World Sanskrit Conference, one of the most prestigious international events dedicated to Sanskrit scholarship and its intersection with modern knowledge. A milestone in our commitment to educational excellence.',
+    features: [
+      'International co-organiser role',
+      'Bridging heritage education and technology',
+      'Global academic partnerships formed',
+      'Recognised contribution to education sector',
+    ],
+    status: 'Completed',
+    statusColor: 'bg-slate-100 text-slate-600',
+    bg: 'bg-violet-50',
+    border: 'border-violet-100',
+  },
 ]
 
 export default function Projects() {
