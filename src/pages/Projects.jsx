@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom'
 import { Smartphone, BookOpen, Globe2, ArrowRight, ExternalLink, CheckCircle } from 'lucide-react'
+import SEOHead from "../components/SEOHead";
 
 const PROJECTS = [
   {
@@ -64,9 +65,10 @@ export default function Projects() {
   const [activeFilter, setActiveFilter] = useState('all')
   const [selectedProject, setSelectedProject] = useState(null)
 
-  const filteredProjects = activeFilter === 'all'
-    ? portfolioData
-    : portfolioData.filter(p => p.category === activeFilter)
+  const filteredProjects =
+  activeFilter === "all"
+    ? PROJECTS
+    : PROJECTS.filter(p => p.category === activeFilter)
 
   return (
     <main className="pt-16 page-transition bg-slate-50/50 min-h-screen">
@@ -80,7 +82,7 @@ export default function Projects() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(37,99,235,0.03),transparent)]" />
         <div className="max-w-4xl mx-auto px-6 relative z-10 space-y-6">
           <span className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-widest text-blue-600 bg-blue-50 border border-blue-100 px-4 py-2 rounded-full">
-            <FolderKanban size={12} /> PROVEN SOLUTIONS DIRECTORY
+            PROVEN SOLUTIONS DIRECTORY
           </span>
           <h1 className="font-display text-5xl font-bold leading-tight tracking-tight">
             Our Portfolio &amp; Case Studies
@@ -94,19 +96,8 @@ export default function Projects() {
       {/* Filter Menu */}
       <section className="py-8 bg-white border-b border-slate-200">
         <div className="max-w-6xl mx-auto px-6 flex flex-wrap justify-center gap-2">
-          {CATEGORIES.map(cat => (
-            <button
-              key={cat.id}
-              onClick={() => setActiveFilter(cat.id)}
-              className={`px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
-                activeFilter === cat.id
-                  ? 'bg-blue-600 text-white shadow-md'
-                  : 'bg-slate-100 text-slate-600 hover:bg-slate-200 hover:text-slate-900'
-              }`}
-            >
-              {cat.name}
-            </button>
-          ))}
+          
+      
         </div>
       </section>
 
@@ -165,7 +156,7 @@ export default function Projects() {
               className="absolute top-5 right-5 p-2 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-slate-900 transition-colors cursor-pointer"
               aria-label="Close modal"
             >
-              <X size={18} />
+              ✕
             </button>
 
             {/* Modal Hero */}
@@ -204,7 +195,10 @@ export default function Projects() {
                 <ul className="space-y-2.5">
                   {selectedProject.results.map((res, i) => (
                     <li key={i} className="flex gap-2.5 text-xs leading-relaxed text-slate-600">
-                      <CheckCircle2 size={15} className="text-blue-600 shrink-0 mt-0.5" />
+                     <CheckCircle
+    size={15}
+    className="text-blue-600 shrink-0 mt-0.5"
+/>
                       <span>{res}</span>
                     </li>
                   ))}

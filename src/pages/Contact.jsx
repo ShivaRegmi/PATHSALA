@@ -17,7 +17,7 @@ export default function Contact() {
     if (!form.message.trim())                       e.message = 'Message is required'
     else if (form.message.trim().length < 5)       e.message = 'Message must be at least 5 characters'
     return e
-  }
+  } 
 
   function handleChange(e) {
     const { name, value } = e.target
