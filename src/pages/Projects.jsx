@@ -112,7 +112,7 @@ const filteredProjects = PROJECTS
                     {project.category}
                   </span>
                   <span className="text-[10px] font-semibold text-slate-400">
-                    {selectedProject.subtitle}
+                    
                   </span>
                 </div>
                 <h3 className="font-display text-xl font-bold text-slate-900 mb-3 leading-snug">
