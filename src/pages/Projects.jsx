@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from 'react-router-dom'
 import { Smartphone, BookOpen, Globe2, ArrowRight, ExternalLink, CheckCircle } from 'lucide-react'
 import SEOHead from "../components/SEOHead";
@@ -65,10 +65,7 @@ export default function Projects() {
   const [activeFilter, setActiveFilter] = useState('all')
   const [selectedProject, setSelectedProject] = useState(null)
 
-  const filteredProjects =
-  activeFilter === "all"
-    ? PROJECTS
-    : PROJECTS.filter(p => p.category === activeFilter)
+const filteredProjects = PROJECTS
 
   return (
     <main className="pt-16 page-transition bg-slate-50/50 min-h-screen">
@@ -115,21 +112,22 @@ export default function Projects() {
                     {project.category}
                   </span>
                   <span className="text-[10px] font-semibold text-slate-400">
-                    Client: {project.client}
+                    {selectedProject.subtitle}
                   </span>
                 </div>
                 <h3 className="font-display text-xl font-bold text-slate-900 mb-3 leading-snug">
                   {project.title}
                 </h3>
                 <p className="text-slate-500 text-xs leading-relaxed mb-6 line-clamp-3">
-                  {project.overview}
+                  {project.desc}
                 </p>
 
                 {/* Metrics Highlight */}
-                <div className="bg-slate-50 border border-slate-100 rounded-2xl p-4.5 mb-6 text-center">
-                  <div className="text-blue-600 text-2xl font-bold mb-0.5">{project.metrics.value}</div>
-                  <div className="text-slate-500 text-[10px] font-semibold uppercase tracking-wider">{project.metrics.label}</div>
-                </div>
+                <div className={`${project.bg} ${project.border} border rounded-2xl p-4 mb-6`}>
+  <span className={`${project.statusColor} px-3 py-1 rounded-full text-xs font-semibold`}>
+    {project.status}
+  </span>
+</div>
               </div>
 
               <div className="px-8 pb-8 pt-0">
@@ -161,9 +159,13 @@ export default function Projects() {
 
             {/* Modal Hero */}
             <div className="bg-slate-900 text-white p-8 rounded-t-3xl pr-14">
-              <span className="text-[10px] font-bold uppercase tracking-widest text-blue-600 bg-cyan-400/10 border border-cyan-400/20 px-3 py-1 rounded-full">
-                {selectedProject.category} Case Study
-              </span>
+             <span className={`${project.tagColor} text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full`}>
+  {project.tag}
+</span>
+
+<span className="text-[10px] font-semibold text-slate-400">
+  {project.subtitle}
+</span>
               <h2 className="font-display text-3xl font-bold mt-3 mb-2">{selectedProject.title}</h2>
               <p className="text-slate-400 text-xs font-semibold uppercase tracking-wider">Client: {selectedProject.client}</p>
             </div>
@@ -174,34 +176,22 @@ export default function Projects() {
               {/* Overview */}
               <div className="space-y-2">
                 <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400">Overview</h4>
-                <p className="text-slate-700 text-sm leading-relaxed">{selectedProject.overview}</p>
-              </div>
-
-              {/* Challenge vs Solution */}
-              <div className="grid sm:grid-cols-2 gap-6 border-t border-slate-100 pt-6">
-                <div className="space-y-2">
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-red-500">The Challenge</h4>
-                  <p className="text-slate-600 text-xs leading-relaxed">{selectedProject.challenge}</p>
-                </div>
-                <div className="space-y-2">
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-green-600">The Solution</h4>
-                  <p className="text-slate-600 text-xs leading-relaxed">{selectedProject.solution}</p>
-                </div>
+                <p className="text-slate-700 text-sm leading-relaxed">{selectedProject.desc}</p>
               </div>
 
               {/* Results & Outcomes */}
               <div className="border-t border-slate-100 pt-6 space-y-3">
                 <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400">Key Results</h4>
                 <ul className="space-y-2.5">
-                  {selectedProject.results.map((res, i) => (
-                    <li key={i} className="flex gap-2.5 text-xs leading-relaxed text-slate-600">
-                     <CheckCircle
-    size={15}
-    className="text-blue-600 shrink-0 mt-0.5"
-/>
-                      <span>{res}</span>
-                    </li>
-                  ))}
+                  {selectedProject.features.map((item, i) => (
+  <li key={i} className="flex gap-2.5 text-xs leading-relaxed text-slate-600">
+    <CheckCircle
+      size={15}
+      className="text-blue-600 shrink-0 mt-0.5"
+    />
+    <span>{item}</span>
+  </li>
+))}
                 </ul>
               </div>
 
