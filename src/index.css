@@ -10,7 +10,7 @@
   --color-accent: #06b6d4;
 }
 
-/* Premium Button Design System */
+
 .btn-primary {
   display: inline-flex;
   align-items: center;
@@ -182,9 +182,7 @@ input, textarea { font-family: var(--font-body); }
   animation: fadeUp 0.4s ease-out;
 }
 
-/* Premium Visual Design System Updates */
 
-/* Glassmorphism Styles */
 .glass-card {
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(12px);
@@ -218,9 +216,7 @@ input, textarea { font-family: var(--font-body); }
   opacity: 0.4;
 }
 
-/* Section Backgrounds */
 
-/* Hero: Futuristic AI environment mesh */
 .bg-futuristic-ai {
   background-color: #020617;
   background-image: 
@@ -229,7 +225,7 @@ input, textarea { font-family: var(--font-body); }
     radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.05) 0%, transparent 50%);
 }
 
-/* Section 1: Research & Innovation - Dark mesh */
+
 .bg-research-theme {
   background-color: #030712;
   background-image: 

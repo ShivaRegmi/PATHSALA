@@ -96,10 +96,10 @@ export const researchData = [
     activeProjects: [],
     labs: [],
     publications: [
-      { title: 'Sanskrit Grammar Mappings in Vector Space Models', authors: 'S. Regmi, Y. Adhikari', journal: 'International Sanskrit Computing Journal', year: '2025', link: '#' },
+      { title: 'Sanskrit Grammar Mappings in Vector Space Models', authors: 'Y. Adhikari', journal: 'International Sanskrit Computing Journal', year: '2025', link: '#' },
       { title: 'Decentralized Identity Verification for Academic Certifications', authors: 'B. Devkota, S. Regmi', journal: 'Decentralized Ledger Technology Review', year: '2025', link: '#' },
       { title: 'Optimizing Language Modeling for Low-Resource Languages', authors: 'S. Regmi', journal: 'Global Journal of AI Research', year: '2024', link: '#' },
-      { title: 'Computational Grammar Mappings for Devanagari Texts', authors: 'S. Regmi, L. Shrestha', journal: 'NLP and Indology Symposium', year: '2024', link: '#' }
+      { title: 'Computational Grammar Mappings for Devanagari Texts', authors: 'L. Shrestha', journal: 'NLP and Indology Symposium', year: '2024', link: '#' }
     ],
     collaborators: [
       'Global Academic Publishers',

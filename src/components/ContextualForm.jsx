@@ -228,7 +228,7 @@ export default function ContextualForm({ formType = 'consultation', pageTitle = 
           <input
             type="text"
             name="name"
-            placeholder="John Doe"
+            placeholder="Ugen Dorji"
             value={formData.name}
             onChange={handleChange}
             className="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-cyan-400 transition-colors"
@@ -240,7 +240,7 @@ export default function ContextualForm({ formType = 'consultation', pageTitle = 
           <input
             type="email"
             name="email"
-            placeholder="john@example.com"
+            placeholder="ugen@example.com"
             value={formData.email}
             onChange={handleChange}
             className="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-cyan-400 transition-colors"
